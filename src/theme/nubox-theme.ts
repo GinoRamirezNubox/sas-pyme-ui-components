@@ -1,4 +1,4 @@
-import type {Theme} from 'theme-ui';
+import {Theme} from 'theme-ui';
 
 const nuboxTheme: Theme = {
   fonts: {
