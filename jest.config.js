@@ -2,8 +2,7 @@
  * For a detailed explanation regarding each configuration property and type check, visit:
  * https://jestjs.io/docs/configuration
  */
-
-export default {
+module.exports = {
   // Automatically clear mock calls, instances, contexts and results before every test
   clearMocks: true,
   rootDir: 'src',
@@ -16,5 +15,5 @@ export default {
   },
   // The test environment that will be used for testing
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts', '@testing-library/jest-dom'],
+  setupFilesAfterEnv: ['@testing-library/jest-dom'],
 };
