@@ -1,5 +1,5 @@
 {
-  "name": "@suma/sas-pyme-ui-components",
+  "name": "sas-pyme-ui-components",
   "version": "1.0.0",
   "description": "componentes ui genericos para el proyecto pyme",
   "main": "dist/cjs/index.js",
@@ -11,7 +11,15 @@
     "test": "cross-env BABEL_ENV=test jest  --maxWorkers=4 --coverage",
     "test:watch": "cross-env BABEL_ENV=test jest --maxWorkers=4 --watchAll --coverage --detectOpenHandles",
     "coverage": "cross-env BABEL_ENV=test jest --coverage --maxWorkers=4 --ci --reporters=default --reporters=jest-junit",
-    "publish": "npm run build && npm publish dist/ --access public"
+    "publish": "npm run build && npm publish --access public"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "homepage": "https://github.com/GinoRamirezNubox/sas-pyme-ui-components",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GinoRamirezNubox/sas-pyme-ui-components.git"
   },
   "license": "ISC",
   "author": "suma+ engineering",
