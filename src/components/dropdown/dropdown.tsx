@@ -1,10 +1,10 @@
-import React from 'react';
-import {Box} from 'theme-ui';
-import DropdownButton from './components/dropdown-button/dropdown-button';
-import DropdownMenu from './components/dropdown-menu/dropdown-menu';
-import DropdownOption from './components/dropdown-option/dropdown-option';
-import {DropdownProvider} from './dropdown.context';
-import {DropdownHOCProps} from './dropdown.types';
+import React from "react";
+import { Box } from "theme-ui";
+import DropdownButton from "./components/dropdown-button/dropdown-button";
+import DropdownMenu from "./components/dropdown-menu/dropdown-menu";
+import DropdownOption from "./components/dropdown-option/dropdown-option";
+import { DropdownProvider } from "./dropdown.context";
+import { DropdownHOCProps } from "./dropdown.types";
 
 const DropdownHOC: React.FC<DropdownHOCProps> = ({
   children,
@@ -16,20 +16,22 @@ const DropdownHOC: React.FC<DropdownHOCProps> = ({
   React.useEffect(() => {
     const handleClick = (event: MouseEvent) => {
       // @ts-ignore
-      if (!document.getElementById(dropdownId).contains(event.target as Node)) {
+      if (
+        !document.getElementById(dropdownId)?.contains(event.target as Node)
+      ) {
         setIsOpen(false);
       }
     };
 
-    window.addEventListener('click', handleClick);
+    window.addEventListener("click", handleClick);
 
     return () => {
-      window.removeEventListener('click', handleClick);
+      window.removeEventListener("click", handleClick);
     };
   }, [dropdownId]);
 
   return (
-    <Box sx={{position: 'relative', ...sx}} id={dropdownId}>
+    <Box sx={{ position: "relative", ...sx }} id={dropdownId}>
       <DropdownProvider
         value={{
           isOpen,
